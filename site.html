@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- import Oxygen font from Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+
+	<!-- Website Title -->
+	<title>Nonogram Generator</title>
+	
+	<!-- css style -->
+	<link rel="stylesheet" href="./styles.css">
+	<!-- javascript code -->
+     <script src="./script.js"></script>
+	</head>
+
+	<body onload="load();">
+	<div id="Header">
+		Nonogram Generator
+	</div>
+	
+	<div id="TimerDisplay">
+		00 : 00
+	</div>
+
+	<div class="PlayArea">
+		<div class="ColHints" id="ColHints">
+		</div>
+		<div class="RowHints" id="RowHints">
+		</div>
+		<div class="Board" id="Board">
+		</div>
+	</div>
+
+	<div id="Settings">
+		<div>
+		<p>Puzzle Size: <span id="puzzleSize">4</span></p>
+		</div>
+		<div>
+  		<input type="range" min="3" max="7" value="4" id="sizeSlider">
+		</div>
+		<script>
+		var sSlider = document.getElementById("sizeSlider");
+		var selectedSize = document.getElementById("puzzleSize");
+		sSlider.oninput = function(){
+			selectedSize.innerHTML = this.value;
+		}
+		</script>
+
+		<button type="button" onclick="loadB()">Generate Puzzle</button>
+
+	</div>
+
+	<div id="Subtitle">
+	Don't give up!
+	</div>
+
+	</body>
+</html>
