@@ -17,7 +17,7 @@ var timerDisplayInterval;
 
 async function load(){
 	await new Promise(r => setTimeout(r, 1000));
-	fadeTitleIn();
+	fadeIn();
 }
 
 async function loadB(){
@@ -102,17 +102,18 @@ async function loadB(){
 
 	createBoard();
 	drawHints();
-	fadeTimerIn();
+	startTimer();
 
 	var settings = document.getElementById("Settings");
 	settings.innerHTML = ``;
 }
 
-function fadeTitleIn(){
+function fadeIn(){
 	document.getElementById("Header").style.opacity=1;
+	document.getElementById("Settings").style.opacity=1;
 }
 
-function fadeTimerIn(){
+function startTimer(){
 	document.getElementById("TimerDisplay").style.opacity=1;
 	timerDisplayInterval = setInterval(function(){
 	var now = new Date().getTime();

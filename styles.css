@@ -17,10 +17,14 @@ html{
 	color: #888888;
 }
 #Settings{
+	font-family: 'Oxygen', sans-serif;
+	color: black;
 	position: relative;
 	left: 50%;
 	-ms-transform: translate(-50px, 0%);
 	transform: translate(-50px, 0%);
+	opacity: 0;
+	transition: 2s;
 }
 .PlayArea{
 	display: grid;
